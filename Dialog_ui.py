@@ -1,7 +1,6 @@
 from functools import partial
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
@@ -28,6 +27,7 @@ def clearLayout(layout):
             item = layout.takeAt(0)
             widget = item.widget()
             if widget is not None:
+                widget.setParent(None)
                 widget.deleteLater()
             else:
                 clearLayout(item.layout())
@@ -42,10 +42,11 @@ class Ui_DialogAjoutApp(QDialog):
     def __init__(self,vbox,id_):
         super().__init__()
         self.vbox = vbox
-        self.setupUi(id_)
+        self.id_ = id_
+        self.setupUi()
         self.exec()
 
-    def setupUi(self,id_):
+    def setupUi(self,):
         self.resize(558, 386)
         self.setStyleSheet(u"QDialog {\n"
 "    background-color: #4A657A; /* Couleur de fond sombre */\n"
@@ -107,7 +108,7 @@ class Ui_DialogAjoutApp(QDialog):
 "    font-weight: bold;\n"
 "}\n"
 "")
-        self.id_ = id_
+
 
         self.labelTitreApp = QLabel(self)
         self.labelTitreApp.setObjectName(u"labelTitreApp")
@@ -357,10 +358,11 @@ class Ui_DialogAjoutNot(QDialog):
     def __init__(self,vbox,id_):
         super().__init__()
         self.vbox = vbox
-        self.setupUi(id_)
+        self.id_ = id_
+        self.setupUi()
         self.exec()
 
-    def setupUi(self,id_):
+    def setupUi(self,):
         self.resize(712, 364)
         self.setStyleSheet(u"QDialog {\n"
 "    background-color: #4A657A; /* Couleur de fond sombre */\n"
@@ -422,7 +424,7 @@ class Ui_DialogAjoutNot(QDialog):
 "    font-weight: bold;\n"
 "}\n"
 "")
-        self.id_ = id_
+
 
         self.labelTitreNote = QLabel(self)
         self.labelTitreNote.setObjectName(u"labelTitreNote")

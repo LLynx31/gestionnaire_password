@@ -1,10 +1,9 @@
 from PySide6.QtWidgets import (QFrame, QLayout,
                                QMainWindow, QScrollArea,
-                               QStackedWidget, QVBoxLayout, QSpacerItem)
+                               QStackedWidget,)
 from Dialog_ui import *
 from modelsData import *
 from functools import partial
-
 
 class Ui_MainWindow(QMainWindow):
     def __init__(self):
@@ -45,9 +44,6 @@ class Ui_MainWindow(QMainWindow):
         self.titreFrameLabel = QLabel(self.pageConnexion)
         self.titreFrameLabel.setObjectName(u"titreFrameLabel")
         self.titreFrameLabel.setGeometry(QRect(30, 40, 391, 41))
-
-
-
 
         font = QFont()
         font.setPointSize(12)
@@ -455,13 +451,13 @@ class Ui_MainWindow(QMainWindow):
         self.frameApplication.setObjectName(u"frameApplication")
         self.frameApplication.setGeometry(QRect(0, 0, 701, 651))
         self.frameApplication.setStyleSheet(u"/* Style g\u00e9n\u00e9ral de la frame */\n"
-"QFrame {\n"
-"    background-color: #2C3E50; /* Couleur de fond sombre */\n"
-"    border-radius: 10px; /* Coins arrondis */\n"
-"    padding: 10px; /* Espacement int\u00e9rieur */\n"
-"    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
-"    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
-"}")
+                                            "QFrame {\n"
+                                            "    background-color: #2C3E50; /* Couleur de fond sombre */\n"
+                                            "    border-radius: 10px; /* Coins arrondis */\n"
+                                            "    padding: 10px; /* Espacement int\u00e9rieur */\n"
+                                            "    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
+                                            "    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
+                                            "}")
         self.frameApplication.setFrameShape(QFrame.Shape.StyledPanel)
         self.frameApplication.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -469,12 +465,12 @@ class Ui_MainWindow(QMainWindow):
         self.frameAddApplication.setObjectName(u"frameAddApplication")
         self.frameAddApplication.setGeometry(QRect(10, 10, 681, 81))
         self.frameAddApplication.setStyleSheet(u"QFrame {\n"
-"    background-color: #2C3E50; /* Couleur de fond sombre */\n"
-"    border-radius: 10px; /* Coins arrondis */\n"
-"    padding: 10px; /* Espacement int\u00e9rieur */\n"
-"    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
-"    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
-"}")
+                                               "    background-color: #2C3E50; /* Couleur de fond sombre */\n"
+                                               "    border-radius: 10px; /* Coins arrondis */\n"
+                                               "    padding: 10px; /* Espacement int\u00e9rieur */\n"
+                                               "    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
+                                               "    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
+                                               "}")
         self.frameAddApplication.setFrameShape(QFrame.Shape.StyledPanel)
         self.frameAddApplication.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -482,29 +478,29 @@ class Ui_MainWindow(QMainWindow):
         self.pushButtonAddapplication.setObjectName(u"pushButtonAddapplication")
         self.pushButtonAddapplication.setGeometry(QRect(20, 10, 219, 51))
         self.pushButtonAddapplication.setStyleSheet(u"QPushButton {\n"
-"    background-color: #1ABC9C; /* Couleur verte pour les boutons */\n"
-"    color: white; /* Couleur du texte */\n"
-"    border: none; /* Pas de bordure */\n"
-"    border-radius: 5px; /* Coins l\u00e9g\u00e8rement arrondis */\n"
-"    padding: 8px 15px; /* Espacement int\u00e9rieur */\n"
-"    font-size: 14px; /* Taille de la police */\n"
-"    font-weight: bold; /* Texte en gras */\n"
-"    margin: 5px 0; /* Espacement entre les boutons */\n"
-"	height : 25px\n"
-"}\n"
-"\n"
-"/* Effet clic pour les boutons */\n"
-"QPushButton:pressed {\n"
-"    background-color: #149174; /* Couleur encore plus fonc\u00e9e quand cliqu\u00e9 */\n"
-"}\n"
-"\n"
-"/* Style des labels */\n"
-"QLabel {\n"
-"    color: #ECF0F1; /* Couleur blanche/gris clair */\n"
-"    font-size: 14px; /* Taille de la police */\n"
-"    margin-bottom: 10px; /* Espacement sous le label */\n"
-"}\n"
-"")
+                                                    "    background-color: #1ABC9C; /* Couleur verte pour les boutons */\n"
+                                                    "    color: white; /* Couleur du texte */\n"
+                                                    "    border: none; /* Pas de bordure */\n"
+                                                    "    border-radius: 5px; /* Coins l\u00e9g\u00e8rement arrondis */\n"
+                                                    "    padding: 8px 15px; /* Espacement int\u00e9rieur */\n"
+                                                    "    font-size: 14px; /* Taille de la police */\n"
+                                                    "    font-weight: bold; /* Texte en gras */\n"
+                                                    "    margin: 5px 0; /* Espacement entre les boutons */\n"
+                                                    "	height : 25px\n"
+                                                    "}\n"
+                                                    "\n"
+                                                    "/* Effet clic pour les boutons */\n"
+                                                    "QPushButton:pressed {\n"
+                                                    "    background-color: #149174; /* Couleur encore plus fonc\u00e9e quand cliqu\u00e9 */\n"
+                                                    "}\n"
+                                                    "\n"
+                                                    "/* Style des labels */\n"
+                                                    "QLabel {\n"
+                                                    "    color: #ECF0F1; /* Couleur blanche/gris clair */\n"
+                                                    "    font-size: 14px; /* Taille de la police */\n"
+                                                    "    margin-bottom: 10px; /* Espacement sous le label */\n"
+                                                    "}\n"
+                                                    "")
 
         self.scrollAreaApplication = QScrollArea(self.frameApplication)
         self.scrollAreaApplication.setObjectName(u"scrollAreaApplication")
@@ -515,21 +511,19 @@ class Ui_MainWindow(QMainWindow):
         self.scrollAreaWidgetContentsApp = QWidget()
         self.scrollAreaWidgetContentsApp.setObjectName(u"scrollAreaWidgetContentsApp")
         self.scrollAreaWidgetContentsApp.setStyleSheet(u"/* Style g\u00e9n\u00e9ral de la frame */\n"
-"QWidget {\n"
-"    background-color: #2C3E50;\n"
-"    padding: 10px; /* Espacement int\u00e9rieur */\n"
-"    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
-"}")
+                                                       "QWidget {\n"
+                                                       "    background-color: #2C3E50;\n"
+                                                       "    padding: 10px; /* Espacement int\u00e9rieur */\n"
+                                                       "    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
+                                                       "}")
 
         self.verticalLayoutApp = QVBoxLayout(self.scrollAreaWidgetContentsApp)
         self.verticalLayoutApp.setObjectName(u"verticalLayoutApp")
         self.verticalLayoutApp.setSizeConstraint(QLayout.SizeConstraint.SetMinimumSize)
         self.verticalLayoutApp.setContentsMargins(5, 5, 5, 5)
 
-
-
-        spacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-        self.verticalLayoutApp.addItem(spacer)
+        spacerApp = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalLayoutApp.addItem(spacerApp)
 
         self.scrollAreaApplication.setWidget(self.scrollAreaWidgetContentsApp)
         self.stackedWidget.addWidget(self.pageApplication)
@@ -542,13 +536,13 @@ class Ui_MainWindow(QMainWindow):
         self.frameCarteBancaire.setObjectName(u"frameCarteBancaire")
         self.frameCarteBancaire.setGeometry(QRect(0, 0, 701, 651))
         self.frameCarteBancaire.setStyleSheet(u"/* Style g\u00e9n\u00e9ral de la frame */\n"
-"QFrame {\n"
-"    background-color: #2C3E50; /* Couleur de fond sombre */\n"
-"    border-radius: 10px; /* Coins arrondis */\n"
-"    padding: 10px; /* Espacement int\u00e9rieur */\n"
-"    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
-"    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
-"}")
+                                              "QFrame {\n"
+                                              "    background-color: #2C3E50; /* Couleur de fond sombre */\n"
+                                              "    border-radius: 10px; /* Coins arrondis */\n"
+                                              "    padding: 10px; /* Espacement int\u00e9rieur */\n"
+                                              "    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
+                                              "    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
+                                              "}")
         self.frameCarteBancaire.setFrameShape(QFrame.Shape.StyledPanel)
         self.frameCarteBancaire.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -556,12 +550,12 @@ class Ui_MainWindow(QMainWindow):
         self.frameAddCarteBancaire.setObjectName(u"frameAddCarteBancaire")
         self.frameAddCarteBancaire.setGeometry(QRect(10, 10, 681, 81))
         self.frameAddCarteBancaire.setStyleSheet(u"QFrame {\n"
-"    background-color: #2C3E50; /* Couleur de fond sombre */\n"
-"    border-radius: 10px; /* Coins arrondis */\n"
-"    padding: 10px; /* Espacement int\u00e9rieur */\n"
-"    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
-"    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
-"}")
+                                                 "    background-color: #2C3E50; /* Couleur de fond sombre */\n"
+                                                 "    border-radius: 10px; /* Coins arrondis */\n"
+                                                 "    padding: 10px; /* Espacement int\u00e9rieur */\n"
+                                                 "    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
+                                                 "    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
+                                                 "}")
         self.frameAddCarteBancaire.setFrameShape(QFrame.Shape.StyledPanel)
         self.frameAddCarteBancaire.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -569,29 +563,29 @@ class Ui_MainWindow(QMainWindow):
         self.pushButtonAddCarteBancaire.setObjectName(u"pushButtonAddCarteBancaire")
         self.pushButtonAddCarteBancaire.setGeometry(QRect(20, 10, 219, 51))
         self.pushButtonAddCarteBancaire.setStyleSheet(u"QPushButton {\n"
-"    background-color: #1ABC9C; /* Couleur verte pour les boutons */\n"
-"    color: white; /* Couleur du texte */\n"
-"    border: none; /* Pas de bordure */\n"
-"    border-radius: 5px; /* Coins l\u00e9g\u00e8rement arrondis */\n"
-"    padding: 8px 15px; /* Espacement int\u00e9rieur */\n"
-"    font-size: 14px; /* Taille de la police */\n"
-"    font-weight: bold; /* Texte en gras */\n"
-"    margin: 5px 0; /* Espacement entre les boutons */\n"
-"	height : 25px\n"
-"}\n"
-"\n"
-"/* Effet clic pour les boutons */\n"
-"QPushButton:pressed {\n"
-"    background-color: #149174; /* Couleur encore plus fonc\u00e9e quand cliqu\u00e9 */\n"
-"}\n"
-"\n"
-"/* Style des labels */\n"
-"QLabel {\n"
-"    color: #ECF0F1; /* Couleur blanche/gris clair */\n"
-"    font-size: 14px; /* Taille de la police */\n"
-"    margin-bottom: 10px; /* Espacement sous le label */\n"
-"}\n"
-"")
+                                                      "    background-color: #1ABC9C; /* Couleur verte pour les boutons */\n"
+                                                      "    color: white; /* Couleur du texte */\n"
+                                                      "    border: none; /* Pas de bordure */\n"
+                                                      "    border-radius: 5px; /* Coins l\u00e9g\u00e8rement arrondis */\n"
+                                                      "    padding: 8px 15px; /* Espacement int\u00e9rieur */\n"
+                                                      "    font-size: 14px; /* Taille de la police */\n"
+                                                      "    font-weight: bold; /* Texte en gras */\n"
+                                                      "    margin: 5px 0; /* Espacement entre les boutons */\n"
+                                                      "	height : 25px\n"
+                                                      "}\n"
+                                                      "\n"
+                                                      "/* Effet clic pour les boutons */\n"
+                                                      "QPushButton:pressed {\n"
+                                                      "    background-color: #149174; /* Couleur encore plus fonc\u00e9e quand cliqu\u00e9 */\n"
+                                                      "}\n"
+                                                      "\n"
+                                                      "/* Style des labels */\n"
+                                                      "QLabel {\n"
+                                                      "    color: #ECF0F1; /* Couleur blanche/gris clair */\n"
+                                                      "    font-size: 14px; /* Taille de la police */\n"
+                                                      "    margin-bottom: 10px; /* Espacement sous le label */\n"
+                                                      "}\n"
+                                                      "")
 
         self.scrollAreaCarteBancaire = QScrollArea(self.frameCarteBancaire)
         self.scrollAreaCarteBancaire.setObjectName(u"scrollAreaCarteBancaire")
@@ -602,23 +596,23 @@ class Ui_MainWindow(QMainWindow):
         self.scrollAreaWidgetContentsCB = QWidget()
         self.scrollAreaWidgetContentsCB.setObjectName(u"scrollAreaWidgetContents_2")
         self.scrollAreaWidgetContentsCB.setStyleSheet(u"/* Style g\u00e9n\u00e9ral de la frame */\n"
-"QWidget {\n"
-"    background-color: #2C3E50; /* Couleur de fond sombre */\n"
-"    padding: 10px; /* Espacement int\u00e9rieur */\n"
-"    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
-"}")
+                                                      "QWidget {\n"
+                                                      "    background-color: #2C3E50; /* Couleur de fond sombre */\n"
+                                                      "    padding: 10px; /* Espacement int\u00e9rieur */\n"
+                                                      "    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
+                                                      "}")
 
         self.verticalLayoutCarteBancaire = QVBoxLayout(self.scrollAreaWidgetContentsCB)
         self.verticalLayoutCarteBancaire.setObjectName(u"verticalLayoutCarteBancaire")
         self.verticalLayoutCarteBancaire.setSizeConstraint(QLayout.SizeConstraint.SetMinimumSize)
         self.verticalLayoutCarteBancaire.setContentsMargins(0, 0, 0, 0)
 
-        self.verticalLayoutCarteBancaire.addItem(spacer)
+        spacerCb = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalLayoutCarteBancaire.addItem(spacerCb)
 
         self.scrollAreaCarteBancaire.setWidget(self.scrollAreaWidgetContentsCB)
         self.stackedWidget.addWidget(self.pageCarteBancaire)
         self.scrollAreaWidgetContentsCB.adjustSize()
-
 
         self.pageNote = QWidget()
         self.pageNote.setObjectName(u"pageNote")
@@ -627,13 +621,13 @@ class Ui_MainWindow(QMainWindow):
         self.frameNote.setObjectName(u"frameNote")
         self.frameNote.setGeometry(QRect(0, 0, 701, 651))
         self.frameNote.setStyleSheet(u"/* Style g\u00e9n\u00e9ral de la frame */\n"
-"QFrame {\n"
-"    background-color: #2C3E50; /* Couleur de fond sombre */\n"
-"    border-radius: 10px; /* Coins arrondis */\n"
-"    padding: 10px; /* Espacement int\u00e9rieur */\n"
-"    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
-"    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
-"}")
+                                     "QFrame {\n"
+                                     "    background-color: #2C3E50; /* Couleur de fond sombre */\n"
+                                     "    border-radius: 10px; /* Coins arrondis */\n"
+                                     "    padding: 10px; /* Espacement int\u00e9rieur */\n"
+                                     "    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
+                                     "    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
+                                     "}")
         self.frameNote.setFrameShape(QFrame.Shape.StyledPanel)
         self.frameNote.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -641,12 +635,12 @@ class Ui_MainWindow(QMainWindow):
         self.frameAddNote.setObjectName(u"frameAddCarteBancaire_3")
         self.frameAddNote.setGeometry(QRect(10, 10, 681, 81))
         self.frameAddNote.setStyleSheet(u"QFrame {\n"
-"    background-color: #2C3E50; /* Couleur de fond sombre */\n"
-"    border-radius: 10px; /* Coins arrondis */\n"
-"    padding: 10px; /* Espacement int\u00e9rieur */\n"
-"    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
-"    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
-"}")
+                                        "    background-color: #2C3E50; /* Couleur de fond sombre */\n"
+                                        "    border-radius: 10px; /* Coins arrondis */\n"
+                                        "    padding: 10px; /* Espacement int\u00e9rieur */\n"
+                                        "    border: 2px solid #34495E; /* Bordure fine et \u00e9l\u00e9gante */\n"
+                                        "    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
+                                        "}")
         self.frameAddNote.setFrameShape(QFrame.Shape.StyledPanel)
         self.frameAddNote.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -655,29 +649,29 @@ class Ui_MainWindow(QMainWindow):
         self.pushButtonAddNote.setGeometry(QRect(20, 10, 219, 51))
         self.pushButtonAddNote.setText("Ajouter une note")
         self.pushButtonAddNote.setStyleSheet(u"QPushButton {\n"
-"    background-color: #1ABC9C; /* Couleur verte pour les boutons */\n"
-"    color: white; /* Couleur du texte */\n"
-"    border: none; /* Pas de bordure */\n"
-"    border-radius: 5px; /* Coins l\u00e9g\u00e8rement arrondis */\n"
-"    padding: 8px 15px; /* Espacement int\u00e9rieur */\n"
-"    font-size: 14px; /* Taille de la police */\n"
-"    font-weight: bold; /* Texte en gras */\n"
-"    margin: 5px 0; /* Espacement entre les boutons */\n"
-"	height : 25px\n"
-"}\n"
-"\n"
-"/* Effet clic pour les boutons */\n"
-"QPushButton:pressed {\n"
-"    background-color: #149174; /* Couleur encore plus fonc\u00e9e quand cliqu\u00e9 */\n"
-"}\n"
-"\n"
-"/* Style des labels */\n"
-"QLabel {\n"
-"    color: #ECF0F1; /* Couleur blanche/gris clair */\n"
-"    font-size: 14px; /* Taille de la police */\n"
-"    margin-bottom: 10px; /* Espacement sous le label */\n"
-"}\n"
-"")
+                                             "    background-color: #1ABC9C; /* Couleur verte pour les boutons */\n"
+                                             "    color: white; /* Couleur du texte */\n"
+                                             "    border: none; /* Pas de bordure */\n"
+                                             "    border-radius: 5px; /* Coins l\u00e9g\u00e8rement arrondis */\n"
+                                             "    padding: 8px 15px; /* Espacement int\u00e9rieur */\n"
+                                             "    font-size: 14px; /* Taille de la police */\n"
+                                             "    font-weight: bold; /* Texte en gras */\n"
+                                             "    margin: 5px 0; /* Espacement entre les boutons */\n"
+                                             "	height : 25px\n"
+                                             "}\n"
+                                             "\n"
+                                             "/* Effet clic pour les boutons */\n"
+                                             "QPushButton:pressed {\n"
+                                             "    background-color: #149174; /* Couleur encore plus fonc\u00e9e quand cliqu\u00e9 */\n"
+                                             "}\n"
+                                             "\n"
+                                             "/* Style des labels */\n"
+                                             "QLabel {\n"
+                                             "    color: #ECF0F1; /* Couleur blanche/gris clair */\n"
+                                             "    font-size: 14px; /* Taille de la police */\n"
+                                             "    margin-bottom: 10px; /* Espacement sous le label */\n"
+                                             "}\n"
+                                             "")
 
         self.scrollAreaNote = QScrollArea(self.frameNote)
         self.scrollAreaNote.setObjectName(u"scrollAreaNote")
@@ -688,19 +682,19 @@ class Ui_MainWindow(QMainWindow):
         self.scrollAreaWidgetContentsNote = QWidget()
         self.scrollAreaWidgetContentsNote.setObjectName(u"scrollAreaWidgetContents_4")
         self.scrollAreaWidgetContentsNote.setStyleSheet(u"/* Style g\u00e9n\u00e9ral de la frame */\n"
-"QWidget {\n"
-"    background-color: #2C3E50; /* Couleur de fond sombre */\n"
-"    padding: 10px; /* Espacement int\u00e9rieur */\n"
-"    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
-"}")
+                                                        "QWidget {\n"
+                                                        "    background-color: #2C3E50; /* Couleur de fond sombre */\n"
+                                                        "    padding: 10px; /* Espacement int\u00e9rieur */\n"
+                                                        "    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre l\u00e9g\u00e8re */\n"
+                                                        "}")
 
         self.verticalLayoutNote = QVBoxLayout(self.scrollAreaWidgetContentsNote)
         self.verticalLayoutNote.setObjectName(u"verticalLayoutNote")
         self.verticalLayoutNote.setSizeConstraint(QLayout.SizeConstraint.SetMinimumSize)
         self.verticalLayoutNote.setContentsMargins(0, 0, 0, 0)
 
-
-        self.verticalLayoutNote.addItem(spacer)
+        spacerNote = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalLayoutNote.addItem(spacerNote)
 
         self.scrollAreaNote.setWidget(self.scrollAreaWidgetContentsNote)
         self.stackedWidget.addWidget(self.pageNote)
@@ -716,7 +710,7 @@ class Ui_MainWindow(QMainWindow):
         self.stackedWidget.setCurrentIndex(0)
 
 
-        QMetaObject.connectSlotsByName(self)
+
 
     # setupUi
 
@@ -804,10 +798,12 @@ class Ui_MainWindow(QMainWindow):
         self.clearLayout(self.verticalLayoutApp)
         self.clearLayout(self.verticalLayoutCarteBancaire)
 
-        spacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-        self.verticalLayoutApp.addItem(spacer)
-        self.verticalLayoutNote.addItem(spacer)
-        self.verticalLayoutCarteBancaire.addItem(spacer)
+        spacerApp = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        spacerCb = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        spacerNote = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalLayoutApp.addItem(spacerApp)
+        self.verticalLayoutNote.addItem(spacerCb)
+        self.verticalLayoutCarteBancaire.addItem(spacerNote)
 
         self.labelCompte.clicked.disconnect()
         self.stackedWidget.setCurrentIndex(0)
@@ -888,12 +884,13 @@ class Ui_MainWindow(QMainWindow):
             item.clicked.connect(partial(self.lauchDialogModApp,item.id_,))
             vbox.insertWidget(vbox.count()-1,item)
 
-    def clearLayout(self, layout):
+    def clearLayout(self, layout,):
         if layout is not None:
             while layout.count():
                 item = layout.takeAt(0)
                 widget = item.widget()
                 if widget is not None:
+                    widget.setParent(None)
                     widget.deleteLater()
                 else:
                     self.clearLayout(item.layout())
